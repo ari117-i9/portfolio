@@ -4,21 +4,109 @@
    ========================================================= */
 
 const PROJECTS = [
+  /*
+  Template to fill in project explanation.
   {
-    id: "ID",
-    title: "Title", 
-    tagline: "Tagline",
-    tags: ["Tag"],
-    shortDesc: "Short description.",
-    fullDesc: "Description.",
-    github: "https://github.com/",
+  id: ,
+  title: ,
+  tagline: ,
+  tags: [],
+  shortDesc: ,
+  fullDesc: `<u>Situation</u> <br>    
+                Hypothetical: Fake Situation<br> 
+                Real: Real situation<br> 
+                <u>Task</u> 
+                <br> Explain your specific responsibility or the goal you were trying to achieve. <br>
+               <u>Action</u> 
+               <br> Describe the steps you personally took to address the task or challenge. <br>
+                <u>Result</u> <br>
+                 Share the outcome of your actions, emphasizing measurable achievements, lessons learned, and how the experience strengthened your skills.`,
+  github: ,
+  tile: ,
+  featured: false
+
+  }
+
+  */
+  {
+    id: "FraudDashboard",
+    title: "Fraud Scoring Dashboard", 
+    tagline: "Real-Time Fraud Detection System Microservice",
+    tags: [, "ML/AI","Fintech", "FastAPI"],
+    shortDesc: "An event-driven, microservices-based transaction risk scoring platform, inspired by production systems like Stripe Radar.",
+    fullDesc: `<u>Situation</u> <br>    
+                Hypothetical: Digital payment platform processes transactions in real time and wants to be able to flag potential fraud within milliseconds without slowing down checkout for users.<br> 
+                Real: Intention to explore event-driven microservices, asynchronous ML inference, and containerized service orchestration.<br> 
+                <u>Task</u> 
+                <br> 
+                Built a system that ingests transactions asynchronously, scores them with a trained ML model, and surfaces results on a live dashboard without adding latency to the ingestion path.
+                <br>
+               <u>Action</u> 
+               <br> Built a FastAPI endpoint that validates and publishes transactions to Kafka, decoupling ingestion from inference by a trained XGBoost classifier using scikit-learn.
+                    Serialized using joblib for train/inference parity then a Kafka consumer worker scores streaming events and persists results to PostgreSQL with visualisation on an auto-refreshing Streamlit dashboard. 
+                    The full stack was containerized with Docker Compose.
+                <br>
+                <u>Result</u> <br>
+                 Achieved 76.8% recall (43/56) on held-out validation data, confirmed via confusion matrix, with a working end-to-end asynchronous pipeline from ingestion to live visualization.`,
+    github: "https://github.com/ari117-i9/Real-Time-Fraud-Detection-System",
     tile: 1,
+    featured: true
+  },
+
+  {
+    id: "Scala",
+    title: "Inventory CRUD App",
+    tagline: "Full Stack CRUD App Personal Project",
+    tags: ["MVC", "React", "Express.js"],
+    shortDesc: "A full-stack CRUD application for managing grocery store inventory.",
+    fullDesc: `<u>Situation</u> <br>    
+                  Hypothetical: Small businesses like grocery stores need a simple internal tool to track product stock, pricing, and availability.<br> 
+                  Real: This project was a personal learning exercise to practice full-stack CRUD architecture, REST API design, and MVC separation of concerns.<br> 
+                  <u>Task</u> 
+                  <br> Built a full-stack inventory app allowing a user to view, add, update, and delete grocery products through a REST API. <br>
+                <u>Action</u> 
+                <br> Built a Node.js/Express backend with 5 REST endpoints, using Mongoose schemas with required-field validation and centralized error-handling middleware wrapped with express-async-handler. 
+                     Built a React (Vite + Tailwind) frontend with React Router across 4 views, using Axios to consume the API, toast notifications for feedback, and CORS restricted to a single trusted frontend origin. <br>
+                  <u>Result</u> <br>
+                  Delivered a working full CRUD flow across 5 endpoints and 4 frontend views, deepening hands-on understanding of REST API design, MVC structure, and basic API security practices like schema validation and origin restriction.`,
+    github: "https://github.com/ari117-i9/Grocery-CRUD-APP",
+    tile: 2,
+    featured: true
+  },
+
+  {
+    id: "PantryFlow",
+    title: "PantryFlow - ScalaFX Application",
+    tagline: "Food Pantry Inventory & Demand Tracker",
+    tags: ["MVC", "Scala 3", "OOP"],
+    shortDesc: " Scala 3 / ScalaFX desktop application built for a food pantry coordinator, addressing UN SDG 1 (\"No Poverty\").",
+    fullDesc: `<u>Situation</u> <br>    
+                  Hypothetical: Food pantry needs to track donated inventory, expiration dates, and beneficiary needs to minimize waste while prioritizing urgent cases.<br> 
+                  Real: Build a standalone ScalaFX desktop application that demonstrates the advanced OOP and third-party library skills  have acquired across the semester.<br> 
+                  <u>Task</u> 
+                  <br> Built a desktop app to manage pantry inventory, beneficiary registration, requests, and generate waste-minimizing distribution plans. <br>
+                <u>Action</u> 
+                <br> Built a ScalaFX MVC application with one FXML view and controller per tab, persisting data using ScalikeJDBC to an embedded Derby database. Implemented a DistributionPlanner allocation algorithm 
+                     prioritizing near expiry stock and higher urgency requests, splitting shortages proportionally by household size and used Claude and Gemini as drafting tools throughout, manually correcting compile errors and design flaws before acceptance. <br>
+                  <u>Result</u> <br>
+                  Delivered a working four tab CRUD application with cascading deletes, full-text search, and a functioning distribution algorithm, deepening hands-on understanding of MVC design, database persistence, and allocation-algorithm logic.`,
+    github: "https://github.com/ari117-i9/OOP_Final_Project",
+    tile: 3,
     featured: true
   },
   
 ];
 
 const ACTIVITIES = [
+  /*
+  Template to fill in activities description.
+  {
+    period: "Period",
+    title: "Title",
+    role: "Role",
+    desc: "Description"
+  },
+  */
   {
     period: "Period",
     title: "Title",
@@ -29,6 +117,12 @@ const ACTIVITIES = [
 ];
 
 const GALLERY_PHOTOS = [
+  /*
+  Template to fill in image info.
+  {
+    { id: "g1", label: "Label", tile: 1 }
+  },
+  */
   { id: "g1", label: "Label", tile: 1 }  
 ];
 
@@ -120,7 +214,7 @@ function renderProjectDetail(id) {
         <div class="tag-row">
           ${project.tags.map(t => `<span class="tag-chip">${t}</span>`).join("")}
         </div>
-        <a href="${project.github}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
+        <a href="${project.github}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">GitHub →</a>
       </div>
     </div>
     <div class="detail-desc">
