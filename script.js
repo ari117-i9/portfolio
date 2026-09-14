@@ -1,4 +1,4 @@
-const PROFILE_IMAGE = '/images/profile.jpeg';
+const PROFILE_IMAGE = './images/profile.jpeg';
 
 const PROJECTS = [
   {
@@ -130,15 +130,15 @@ const ACTIVITIES = [
 ];
 
 const GALLERY_PHOTOS = [
-  { id: "g1", label: "MFL x Cloud", tile: 1, image: '/images/MFL_2.jpeg' },   
-  { id: "g2", label: "Portfolio Lab", tile: 2, image: '/images/portfolioLabGroup.png' },
+  { id: "g1", label: "MFL x Cloud", tile: 1, image: './images/MFL_2.jpeg' },   
+  { id: "g2", label: "Portfolio Lab", tile: 2, image: './images/portfolioLabGroup.png' },
   { id: "g3", label: "Django Girls Workshop", tile: 3, image: './images/djangoGirls.jpg' }, 
-  { id: "g4", label: "Sunway Open Day", tile: 4, image: '/images/OpenDay.jpeg' },
-  { id: "g7", label: "MFL x Cloud", tile: 5, image: '/images/MFL_1.jpeg' },
-  { id: "g5", label: "Portfolio Lab", tile: 6, image: '/images/portfolioLabMain.png' },
-  { id: "g7", label: "A Product Manager's Perspective", tile: 7, image: '/images/productManager.png' },
-  { id: "g6", label: "AWS Community Day 2025", tile: 8, image: '/images/AWS.jpeg' },
-  { id: "g8", label: "Shark's Annual Smokers (2025)", tile: 9, image: '/images/Smokers.jpeg' },
+  { id: "g4", label: "Sunway Open Day", tile: 4, image: './images/OpenDay.jpeg' },
+  { id: "g7", label: "MFL x Cloud", tile: 5, image: './images/MFL_1.jpeg' },
+  { id: "g5", label: "Portfolio Lab", tile: 6, image: './images/portfolioLabMain.png' },
+  { id: "g7", label: "A Product Manager's Perspective", tile: 7, image: './images/productManager.png' },
+  { id: "g6", label: "AWS Community Day 2025", tile: 8, image: './images/AWS.jpeg' },
+  { id: "g8", label: "Shark's Annual Smokers (2025)", tile: 9, image: './images/Smokers.jpeg' },
 ];
 
 /* =========================================================
