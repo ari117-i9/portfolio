@@ -1,35 +1,8 @@
-/* =========================================================
-   UPDATE CONTENT
-   Add, remove, or change entries.
-   ========================================================= */
+const PROFILE_IMAGE = '/images/profile.jpeg';
 
 const PROJECTS = [
-  /*
-  Template to fill in project explanation.
   {
-  id: ,
-  title: ,
-  tagline: ,
-  tags: [],
-  shortDesc: ,
-  fullDesc: `<u>Situation</u> <br>    
-                Hypothetical: Fake Situation<br> 
-                Real: Real situation<br> 
-                <u>Task</u> 
-                <br> Explain your specific responsibility or the goal you were trying to achieve. <br>
-               <u>Action</u> 
-               <br> Describe the steps you personally took to address the task or challenge. <br>
-                <u>Result</u> <br>
-                 Share the outcome of your actions, emphasizing measurable achievements, lessons learned, and how the experience strengthened your skills.`,
-  github: ,
-  tile: ,
-  featured: false
-
-  }
-
-  */
-  {
-    id: "FraudDashboard",
+   id: "FraudDashboard",
     title: "Fraud Scoring Dashboard", 
     tagline: "Real-Time Fraud Detection System Microservice",
     tags: [, "ML/AI","Fintech", "FastAPI"],
@@ -49,12 +22,10 @@ const PROJECTS = [
                 <u>Result</u> <br>
                  Achieved 76.8% recall (43/56) on held-out validation data, confirmed via confusion matrix, with a working end-to-end asynchronous pipeline from ingestion to live visualization.`,
     github: "https://github.com/ari117-i9/Real-Time-Fraud-Detection-System",
-    tile: 1,
-    featured: true
+    featured: true,
   },
-
   {
-    id: "Scala",
+    id: "CRUD",
     title: "Inventory CRUD App",
     tagline: "Full Stack CRUD App Personal Project",
     tags: ["MVC", "React", "Express.js"],
@@ -71,18 +42,17 @@ const PROJECTS = [
                   Delivered a working full CRUD flow across 5 endpoints and 4 frontend views, deepening hands-on understanding of REST API design, MVC structure, and basic API security practices like schema validation and origin restriction.`,
     github: "https://github.com/ari117-i9/Grocery-CRUD-APP",
     tile: 2,
-    featured: true
+    featured: true,
   },
-
   {
     id: "PantryFlow",
     title: "PantryFlow - ScalaFX Application",
     tagline: "Food Pantry Inventory & Demand Tracker",
-    tags: ["MVC", "Scala 3", "OOP"],
+    tags: ["AI-Assisted", "Scala 3", "OOP"],
     shortDesc: " Scala 3 / ScalaFX desktop application built for a food pantry coordinator, addressing UN SDG 1 (\"No Poverty\").",
     fullDesc: `<u>Situation</u> <br>    
                   Hypothetical: Food pantry needs to track donated inventory, expiration dates, and beneficiary needs to minimize waste while prioritizing urgent cases.<br> 
-                  Real: Build a standalone ScalaFX desktop application that demonstrates the advanced OOP and third-party library skills  have acquired across the semester.<br> 
+                  Real: Final Assignment for subject PRG2104:Object Oriented Programming to build a standalone ScalaFX desktop application that demonstrates the advanced OOP and third-party library skills acquired across the semester.<br> 
                   <u>Task</u> 
                   <br> Built a desktop app to manage pantry inventory, beneficiary registration, requests, and generate waste-minimizing distribution plans. <br>
                 <u>Action</u> 
@@ -92,38 +62,83 @@ const PROJECTS = [
                   Delivered a working four tab CRUD application with cascading deletes, full-text search, and a functioning distribution algorithm, deepening hands-on understanding of MVC design, database persistence, and allocation-algorithm logic.`,
     github: "https://github.com/ari117-i9/OOP_Final_Project",
     tile: 3,
-    featured: true
+    featured: true,
   },
-  
 ];
 
 const ACTIVITIES = [
-  /*
-  Template to fill in activities description.
   {
-    period: "Period",
-    title: "Title",
-    role: "Role",
-    desc: "Description"
+    period: "12th Mar. 2026",
+    title: "A Product Manager’s Perspective",
+    role: "Education Department Lead - Sunway Tech Club",
+    desc: `Organised a product management talk for 16 students detailing daily responsibilities, essential skill sets, and 
+          career roadmaps. Provided a look at the pros and cons of the profession to help participants transition from career 
+          uncertainty to informed strategic alignment. 
+`
   },
-  */
+
   {
-    period: "Period",
-    title: "Title",
-    role: "Role",
-    desc: "Description"
+    period: "29th Nov. 2025",
+    title: "Malaysia Fight League (MFL) x Cloud November Fight Card",
+    role: "Fighter - Amateur Muay Thai Category",
+    desc: `By incorporating lesson learned from the previous loss, achieved a major success for the amateur debut with a 
+          second round technical knockout (TKO) with renewed passion to further improve and achieve even bette results.`
   },
-  
+
+  {
+    period: "26th Nov. 2025",
+    title: "Portfolio Lab: Create your Personal E-Portfolio with the Power of AI",
+    role: "Education Department Lead - Sunway Tech Club",
+    desc: `Organised a personal portfolio Workshop for 32 Sunway students focused on prompt engineering, the STAR method, and personal 
+          branding aligned with SDG 4 and SDG 8. Equipped participants with career-relevant portfolio components and practical 
+          guidance on setting up GitHub Pages to enhance long-term employability.`
+  },
+
+  {
+    period: "1st Nov. 2025",
+    title: "Django Girls Kuala Lumpur 2025 Workshop",
+    role: "Workshop Mentor",
+    desc: `Mentored 30 female learners at a Django Girls workshop, helping them build and deploy live blog applications 
+          using Python and Django. Collaboated with participants through debugging, reinforcing how critical careful 
+          code inspection is for resolving technical errors.`
+  },
+
+  {
+    period: "27th Sep. 2025",
+    title: "Amazon Web Serivces (AWS) Community Day Malaysia 2025",
+    role: "Volunteer - Sunway Tech Club",
+    desc: `Volunteered at AWS Community Day, an annual event of technical discussions and workshops led by industry leaders and 
+          expert AWS users. Contributed by managing venue logistics, attendee registration, and the distribution of event 
+          merchandise.`
+  },
+
+  {
+    period: "17th-18th May 2025",
+    title: "Sunway Open Day",
+    role: "Student Volunteer",
+    desc: `Volunteered at Sunway's May Open Day to guide enquiring students and their families across the campus to 
+          meet to a programme counsellor that is available. `
+  },
+
+  {
+    period: "14th Dec. 2024",
+    title: "Shark's Annual Smoker Fights",
+    role: "Fighter - Kickboxing Category",
+    desc: `Participated at Shark's annual members-only event as a test of grit. Suffered a dissapointing loss but gained meaningful lessons in drive, 
+          intentional effort and time management through the preparation and the loss itself.`
+  },
 ];
 
 const GALLERY_PHOTOS = [
-  /*
-  Template to fill in image info.
-  {
-    { id: "g1", label: "Label", tile: 1 }
-  },
-  */
-  { id: "g1", label: "Label", tile: 1 }  
+  { id: "g1", label: "MFL x Cloud", tile: 1, image: '/images/MFL_2.jpeg' },   
+  { id: "g2", label: "Portfolio Lab", tile: 2, image: '/images/portfolioLabGroup.png' },
+  { id: "g3", label: "Django Girls Workshop", tile: 3, image: './images/djangoGirls.jpg' }, 
+  { id: "g4", label: "Sunway Open Day", tile: 4, image: '/images/OpenDay.jpeg' },
+  { id: "g7", label: "MFL x Cloud", tile: 5, image: '/images/MFL_1.jpeg' },
+  { id: "g5", label: "Portfolio Lab", tile: 6, image: '/images/portfolioLabMain.png' },
+  { id: "g7", label: "A Product Manager's Perspective", tile: 7, image: '/images/productManager.png' },
+  { id: "g6", label: "AWS Community Day 2025", tile: 8, image: '/images/AWS.jpeg' },
+  { id: "g8", label: "Shark's Annual Smokers (2025)", tile: 9, image: '/images/Smokers.jpeg' },
 ];
 
 /* =========================================================
@@ -133,7 +148,7 @@ const GALLERY_PHOTOS = [
 function initials(title) {
   return title
     .split(" ")
-    .map(w => w[0])
+    .map((w) => w[0])
     .join("")
     .slice(0, 2)
     .toUpperCase();
@@ -154,15 +169,11 @@ function tileClass(tile) {
 function projectCardHTML(project, index) {
   return `
     <article class="project-card">
-      <div class="project-tile ${tileClass(project.tile)}">
-        <span class="catalog-no">${catalogNo(index)}</span>
-        ${initials(project.title)}
-      </div>
       <div class="project-body">
         <h3>${project.title}</h3>
         <p class="project-tagline">${project.tagline}</p>
         <div class="tag-row">
-          ${project.tags.map(t => `<span class="tag-chip">${t}</span>`).join("")}
+          ${project.tags.map((t) => `<span class="tag-chip">${t}</span>`).join("")}
         </div>
         <p class="project-desc">${project.shortDesc}</p>
         <div class="card-links">
@@ -176,9 +187,9 @@ function projectCardHTML(project, index) {
 
 function renderFeatured() {
   const el = document.getElementById("featuredGrid");
-  const featured = PROJECTS.filter(p => p.featured);
+  const featured = PROJECTS.filter((p) => p.featured);
   el.innerHTML = featured
-    .map(p => projectCardHTML(p, PROJECTS.indexOf(p)))
+    .map((p) => projectCardHTML(p, PROJECTS.indexOf(p)))
     .join("");
 }
 
@@ -189,14 +200,14 @@ function renderProjectsGrid() {
 
 function renderDropdown() {
   const el = document.getElementById("projectsDropdown");
-  el.innerHTML = PROJECTS
-    .map(p => `<li><a href="#project-${p.id}">${p.title}</a></li>`)
-    .join("");
+  el.innerHTML = PROJECTS.map(
+    (p) => `<li><a href="#project-${p.id}">${p.title}</a></li>`,
+  ).join("");
 }
 
 function renderProjectDetail(id) {
   const el = document.getElementById("projectDetailContent");
-  const index = PROJECTS.findIndex(p => p.id === id);
+  const index = PROJECTS.findIndex((p) => p.id === id);
   const project = PROJECTS[index];
 
   if (!project) {
@@ -204,17 +215,21 @@ function renderProjectDetail(id) {
     return;
   }
 
+  const detailTileInner = project.image
+    ? `<img src="${project.image}" alt="${project.title} screenshot">`
+    : initials(project.title);
+  const detailTileClasses = project.image ? "" : " " + tileClass(project.tile);
+
   el.innerHTML = `
     <div class="detail-head">
-      <div class="detail-tile ${tileClass(project.tile)}">${initials(project.title)}</div>
       <div class="detail-copy">
         <p class="catalog-no">${catalogNo(index)}</p>
         <h1>${project.title}</h1>
         <p class="project-tagline">${project.tagline}</p>
         <div class="tag-row">
-          ${project.tags.map(t => `<span class="tag-chip">${t}</span>`).join("")}
+          ${project.tags.map((t) => `<span class="tag-chip">${t}</span>`).join("")}
         </div>
-        <a href="${project.github}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">GitHub →</a>
+        <a href="${project.github}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
       </div>
     </div>
     <div class="detail-desc">
@@ -229,7 +244,8 @@ function renderProjectDetail(id) {
 
 function renderActivities() {
   const el = document.getElementById("activityList");
-  el.innerHTML = ACTIVITIES.map(a => `
+  el.innerHTML = ACTIVITIES.map(
+    (a) => `
     <div class="activity">
       <p class="activity-period">${a.period}</p>
       <div>
@@ -238,20 +254,27 @@ function renderActivities() {
         <p>${a.desc}</p>
       </div>
     </div>
-  `).join("");
+  `,
+  ).join("");
 }
 
 function galleryItemHTML(photo) {
+  const img = photo.image
+    ? `<img src="${photo.image}" alt="${photo.label}">`
+    : "";
+  const classes = photo.image ? "" : " " + tileClass(photo.tile);
   return `
-    <button class="gallery-item ${tileClass(photo.tile)}" data-photo="${photo.id}" aria-label="View photo: ${photo.label}">
+    <button class="gallery-item${classes}" data-photo="${photo.id}" aria-label="View photo: ${photo.label}">
+      ${img}
       <span>${photo.label}</span>
     </button>
   `;
 }
 
 function renderGalleries() {
-  document.getElementById("homeGallery").innerHTML =
-    GALLERY_PHOTOS.slice(0, 4).map(galleryItemHTML).join("");
+  document.getElementById("homeGallery").innerHTML = GALLERY_PHOTOS.slice(0, 4)
+    .map(galleryItemHTML)
+    .join("");
   document.getElementById("extracurricularGallery").innerHTML =
     GALLERY_PHOTOS.map(galleryItemHTML).join("");
 }
@@ -263,13 +286,19 @@ function renderGalleries() {
 const PAGE_IDS = ["home", "projects", "extracurriculars"];
 
 function showPage(pageId) {
-  document.querySelectorAll(".page").forEach(p => p.classList.remove("page--active"));
+  document
+    .querySelectorAll(".page")
+    .forEach((p) => p.classList.remove("page--active"));
   const target = document.getElementById("page-" + pageId);
-  (target || document.getElementById("page-home")).classList.add("page--active");
+  (target || document.getElementById("page-home")).classList.add(
+    "page--active",
+  );
 
-  document.querySelectorAll(".nav-link").forEach(link => {
+  document.querySelectorAll(".nav-link").forEach((link) => {
     const linkPage = link.dataset.page;
-    const isActive = linkPage === pageId || (pageId === "project-detail" && linkPage === "projects");
+    const isActive =
+      linkPage === pageId ||
+      (pageId === "project-detail" && linkPage === "projects");
     link.classList.toggle("is-active", isActive);
   });
 
@@ -311,17 +340,17 @@ function toggleDropdown() {
   dropdownWrap.classList.contains("is-open") ? closeDropdown() : openDropdown();
 }
 
-dropdownToggle.addEventListener("click", e => {
+dropdownToggle.addEventListener("click", (e) => {
   e.preventDefault();
   e.stopPropagation();
   toggleDropdown();
 });
 
-document.addEventListener("click", e => {
+document.addEventListener("click", (e) => {
   if (!dropdownWrap.contains(e.target)) closeDropdown();
 });
 
-document.addEventListener("keydown", e => {
+document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeDropdown();
 });
 
@@ -354,7 +383,13 @@ let lastFocusedEl = null;
 
 function openLightbox(photo) {
   lastFocusedEl = document.activeElement;
-  lightboxTile.className = "lightbox-tile " + tileClass(photo.tile);
+  if (photo.image) {
+    lightboxTile.className = "lightbox-tile";
+    lightboxTile.innerHTML = `<img src="${photo.image}" alt="${photo.label}">`;
+  } else {
+    lightboxTile.className = "lightbox-tile " + tileClass(photo.tile);
+    lightboxTile.innerHTML = "";
+  }
   lightboxCaption.textContent = photo.label;
   lightbox.hidden = false;
   lightboxClose.focus();
@@ -365,24 +400,35 @@ function closeLightbox() {
   if (lastFocusedEl) lastFocusedEl.focus();
 }
 
-document.addEventListener("click", e => {
+document.addEventListener("click", (e) => {
   const item = e.target.closest(".gallery-item");
   if (item) {
-    const photo = GALLERY_PHOTOS.find(p => p.id === item.dataset.photo);
+    const photo = GALLERY_PHOTOS.find((p) => p.id === item.dataset.photo);
     if (photo) openLightbox(photo);
   }
 });
 
 lightboxClose.addEventListener("click", closeLightbox);
 lightboxBackdrop.addEventListener("click", closeLightbox);
-document.addEventListener("keydown", e => {
+document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
 });
+
+/* =========================================================
+   RENDER: PROFILE PHOTO
+   ========================================================= */
+
+function renderProfilePhoto() {
+  if (!PROFILE_IMAGE) return;
+  document.getElementById("heroPortrait").innerHTML =
+    `<img src="${PROFILE_IMAGE}" alt="">`;
+}
 
 /* =========================================================
    INIT
    ========================================================= */
 
+renderProfilePhoto();
 renderFeatured();
 renderProjectsGrid();
 renderDropdown();

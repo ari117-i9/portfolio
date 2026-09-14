@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ari Imran | Portfolio</title>
-<meta name="description" content="Portfolio of projects and extracurricular work.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ari Imran | Portfolio</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <meta name="description" content="Portfolio of projects and extracurricular work.">
 
-<!-- Fonts: Fraunces (display), Work Sans (body), IBM Plex Mono (labels/utility) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caacupe:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Fonts: Caacupe (display), Work Sans (body), IBM Plex Mono (labels/utility) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caacupe:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- ===== HEADER ======-->
+<!-- ============================= HEADER ============================= -->
 <header class="site-header">
   <div class="header-inner">
     <a href="#home" class="brand">
@@ -45,20 +47,22 @@
   </div>
 </header>
 
-<!-- ====== MAIN ====== -->
+<!-- ============================= MAIN ============================= -->
 <main id="main">
 
-  <!-- ----- HOME ----- -->
+  <!-- ---------- HOME ---------- -->
   <section class="page page--active" id="page-home" aria-labelledby="home-heading">
 
     <div class="hero section-pad">
-      <div class="hero-portrait" aria-hidden="true">
+      <div class="hero-portrait" id="heroPortrait" aria-hidden="true">
         <span>AI</span>
       </div>
       <div class="hero-text">
-        <p class="eyebrow">Computer Science · Class of 2027</p>
+        <p class="eyebrow">Bachelors of Computer Science (Honours) · Class of 2027</p>
         <h1 id="home-heading">Hi, I'm Ari.</h1>
-        <p class="lede">*Need to fill</p>
+        <p class="lede" style= "text-align: justify">Pursuing an undergraduate in Computer Science from Sunway University. 
+                        Backend engineering is my current core strength but I am adaptable and enthusiastic 
+                        about exploring and expanding into other technical domains such as data analytics and cloud computing .</p>
         <div class="hero-actions">
           <a href="#projects" class="btn btn--primary">View projects</a>
           <a href="#extracurriculars" class="btn btn--ghost">Extracurriculars</a>
@@ -70,7 +74,7 @@
 
     <div class="section-pad">
       <div class="section-heading">
-        <h2>Featured Projects</h2>
+        <p class="eyebrow">Featured work</p>
         <a href="#projects" class="text-link">See All Projects →</a>
       </div>
       <div class="card-grid" id="featuredGrid"><!-- populated by script.js --></div>
@@ -81,26 +85,26 @@
     <div class="section-pad">
       <div class="section-heading">
         <h2>Extracurriculars Gallery</h2>
-        <a href="#extracurriculars" class="text-link">See Extracurriculars →</a>
+        <a href="#extracurriculars" class="text-link">See extracurriculars →</a>
       </div>
       <div class="gallery-grid" id="homeGallery"><!-- populated by script.js --></div>
     </div>
 
   </section>
 
-  <!-- ----- PROJECTS grid ----- -->
+  <!-- ---------- PROJECTS (grid) ---------- -->
   <section class="page" id="page-projects" aria-labelledby="projects-heading">
     <div class="section-pad">
       <div class="section-heading section-heading--stacked">
         <p class="eyebrow">Full index</p>
         <h1 id="projects-heading">Projects</h1>
-        <p class="lede">Everything I've built, displayed in one place. Pick one from the dropdown above, or browse the full set below. Links to each project's repository is also provided for further exploration.</p>
+        <p class="lede">Everything I've built, in one place. Pick one from the dropdown above, or browse the full set below and each links out to its GitHub repository.</p>
       </div>
       <div class="card-grid card-grid--full" id="projectsGrid"><!-- populated by script.js --></div>
     </div>
   </section>
 
-  <!-- ----- PROJECT details ------ -->
+  <!-- ---------- PROJECT DETAIL ---------- -->
   <section class="page" id="page-project-detail" aria-labelledby="detail-heading">
     <div class="section-pad section-pad--narrow">
       <a href="#projects" class="text-link text-link--back">← All projects</a>
@@ -108,13 +112,13 @@
     </div>
   </section>
 
-  <!-- ----- EXTRACURRICULARS ----- -->
+  <!-- ---------- EXTRACURRICULARS ---------- -->
   <section class="page" id="page-extracurriculars" aria-labelledby="extra-heading">
     <div class="section-pad">
       <div class="section-heading section-heading--stacked">
         <p class="eyebrow">Beyond the syllabus</p>
         <h1 id="extra-heading">Extracurriculars</h1>
-        <p class="lede">The clubs, teams and volunteer work that take up the rest of my schedule.</p>
+        <p class="lede">The clubs, volunteer work and hobbies that take up the rest of my schedule.</p>
       </div>
 
       <div class="activity-list" id="activityList"><!-- populated by script.js --></div>
@@ -124,7 +128,6 @@
 
     <div class="section-pad">
       <div class="section-heading">
-        <p class="eyebrow">In pictures</p>
         <h2>Gallery</h2>
       </div>
       <div class="gallery-grid" id="extracurricularGallery"><!-- populated by script.js --></div>
@@ -133,7 +136,7 @@
 
 </main>
 
-<!-- ===== LIGHTBOX ====== -->
+<!-- ============================= LIGHTBOX ============================= -->
 <div class="lightbox" id="lightbox" hidden>
   <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
   <div class="lightbox-content" role="dialog" aria-modal="true" aria-labelledby="lightboxCaption">
@@ -145,7 +148,7 @@
   </div>
 </div>
 
-<!-- ====== FOOTER ====== -->
+<!-- ============================= FOOTER ============================= -->
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-block">
@@ -154,7 +157,7 @@
     </div>
 
     <div class="footer-block footer-contact">
-      <p class="eyebrow">Contact</p>
+      <p class="eyebrow">Contacts</p>
       <ul class="contact-list">
         <li>  
             <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2" y="4" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M3 5.5L10 11L17 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
