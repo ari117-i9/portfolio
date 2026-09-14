@@ -1,4 +1,4 @@
-const PROFILE_IMAGE = './images/profile.jpeg';
+const PROFILE_IMAGE = '/images/profile.jpeg';
 
 const PROJECTS = [
   {
